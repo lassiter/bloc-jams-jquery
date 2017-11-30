@@ -1,5 +1,7 @@
 {
   album.songs.forEach( (song, index) => {
+  var prettyTimed = player.prettyTime(song.duration);
+
     song.element = $(`
       <tr>
         <td>
@@ -10,7 +12,7 @@
           </button>
         </td>
         <td>${song.title}</td>
-        <td>${song.duration}</td>
+        <td>${prettyTimed}</td>
       </tr>
     `);
 
